@@ -1,0 +1,13 @@
+.table {
+    width:50rem;
+    margin:auto;
+}
+
+.table button {
+    border:0.2rem solid black;
+    width:10rem;
+    height:10rem;
+    outline: none;
+}.table button:hover {
+    background-color: pink;
+}
