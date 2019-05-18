@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 
-import TicTacTable from './components/TicTacTable';
+import TicTacTable from './components/Tic-Tac/TicTacTable';
 
 class App extends React.Component {
 	constructor() {
