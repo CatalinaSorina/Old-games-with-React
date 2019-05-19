@@ -42,6 +42,7 @@ class TicTacTable extends React.Component {
 
         const winDiv=document.querySelector("#win");
         const playground=document.querySelector("#playground");
+        const again=document.querySelector("#again");
 
         console.log(this.state.player);
         winDiv.textContent=`${this.state.player.toUpperCase()} WIN`;
@@ -51,49 +52,66 @@ class TicTacTable extends React.Component {
             winDiv.classList.remove("none");
             playground.classList.add("none");
             console.log(this.state.player+" win");
+            again.classList.remove("none");
         }
         //===rowB===\\
         else if((col1B.textContent===col2B.textContent) && (col1B.textContent===col3B.textContent) && (col1B.textContent!==" ") && (col2B.textContent!==" ") && (col3B.textContent!==" ")){
             winDiv.classList.remove("none");
             playground.classList.add("none");
             console.log(this.state.player+" win");
+            again.classList.remove("none");
         }
         //===rowB===\\
         else if((col1C.textContent===col2C.textContent) && (col1C.textContent===col3C.textContent) && (col1C.textContent!==" ") && (col2C.textContent!==" ") && (col3C.textContent!==" ")){
             winDiv.classList.remove("none");
             playground.classList.add("none");
             console.log(this.state.player+" win");
+            again.classList.remove("none");
         }
         //===col1==\\
         else if((col1A.textContent===col1B.textContent) && (col1A.textContent===col1C.textContent) && (col1A.textContent!==" ") && (col1B.textContent!==" ") && (col1C.textContent!==" ")){
             winDiv.classList.remove("none");
             playground.classList.add("none");
             console.log(this.state.player+" win");
+            again.classList.remove("none");
         }
         //===col2==\\
         else if((col2A.textContent===col2B.textContent) && (col2A.textContent===col2C.textContent) && (col2A.textContent!==" ") && (col2B.textContent!==" ") && (col2C.textContent!==" ")){
             winDiv.classList.remove("none");
             playground.classList.add("none");
             console.log(this.state.player+" win");
+            again.classList.remove("none");
         }
         //===col3==\\
         else if((col3A.textContent===col3B.textContent) && (col3A.textContent===col3C.textContent) && (col3A.textContent!==" ") && (col3B.textContent!==" ") && (col3C.textContent!==" ")){
             winDiv.classList.remove("none");
             playground.classList.add("none");
             console.log(this.state.player+" win");
+            again.classList.remove("none");
         }
         //===diagonala end===\\
         else if((col3A.textContent===col2B.textContent) && (col3A.textContent===col1C.textContent) && (col3A.textContent!==" ") && (col2B.textContent!==" ") && (col1C.textContent!==" ")){
             winDiv.classList.remove("none");
             playground.classList.add("none");
             console.log(this.state.player+" win");
+            again.classList.remove("none");
         }
         //===diagonala begin===\\
         else if((col1A.textContent===col2B.textContent) && (col1A.textContent===col3C.textContent) && (col1A.textContent!==" ") && (col2B.textContent!==" ") && (col3C.textContent!==" ")){
             winDiv.classList.remove("none");
             playground.classList.add("none");
             console.log(this.state.player+" win");
+            again.classList.remove("none");
         }
+        //===no win===\\
+        else if((col1A.textContent!==" ") && (col1B.textContent!==" ") && (col1C.textContent!==" ") && (col2A.textContent!==" ") && (col2B.textContent!==" ") && (col2C.textContent!==" ") && (col3A.textContent!==" ") && (col3B.textContent!==" ") && (col3C.textContent!==" ")){
+            again.classList.remove("none");
+            playground.classList.add("none");
+        }
+    }
+
+    refresh = () => {
+        console.log("play again");
     }
 
     render() {
@@ -105,6 +123,7 @@ class TicTacTable extends React.Component {
                     <TableRow playerId="B" play={this.play}/>
                     <TableRow playerId="C" play={this.play}/>
                 </div>
+                <button id="again" className="none" onClick={this.refresh}>play again</button>
             </div>
         );
     }

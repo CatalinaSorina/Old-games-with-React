@@ -32,3 +32,18 @@
 }.win:hover{
     border-color: yellow;
 }
+
+#again {
+    margin:1rem;
+    color:rgb(216, 116, 116);
+    background-color: antiquewhite;
+    border:0.1rem solid rgb(85, 18, 18);
+    padding: 1rem;
+    border-radius: 100%;
+    box-shadow: 0 0.5rem 1rem 0.1rem antiquewhite;
+    outline: none;
+}#again:hover {
+    background-color: darkred;
+}#again:active {
+    color: yellow;
+}
