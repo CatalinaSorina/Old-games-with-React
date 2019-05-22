@@ -1,5 +1,16 @@
 import React from 'react';
 
+import styled from 'styled-components';
+
+const Button = styled.button`
+    background: transparent;
+    border-radius: 3px;
+    border: 2px solid palevioletred;
+    color: palevioletred;
+    margin: 0 1em;
+    padding: 0.25em 1em;
+`
+
 class GuessNumber extends React.Component {
     guess = () => {
         let nrFloat=(Math.random()*100);
@@ -12,7 +23,7 @@ class GuessNumber extends React.Component {
         return(
             <div>
                 <input id="number" placeholder="number"/>
-                <button onClick={this.guess}>GUESS</button>
+                <Button onClick={this.guess}>GUESS</Button>
             </div>
         )
     };
