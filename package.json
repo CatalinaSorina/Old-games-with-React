@@ -1,8 +1,8 @@
 {
-  "name": "Tic-Tac-with-React",
+  "name": "Old-games-with-React",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://catalinasorina.github.io/Tic-Tac-with-React/",
+  "homepage": "https://catalinasorina.github.io/Old-games-with-React/",
   "dependencies": {
     "gh-pages": "^2.0.1",
     "prop-types": "15.7.2",
