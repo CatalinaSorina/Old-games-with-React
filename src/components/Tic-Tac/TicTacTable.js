@@ -12,9 +12,6 @@ class TicTacTable extends React.Component {
         };
     }
 
-    // componentDidMount(){
-    // }
-
     play = (e) => {
         const clickTarget=e.target;
         // console.log(clickTarget.textContent);
@@ -110,10 +107,6 @@ class TicTacTable extends React.Component {
         }
     }
 
-    refresh = () => {
-        console.log("play again");
-    }
-
     render() {
         return (
             <div className="table">
@@ -123,7 +116,9 @@ class TicTacTable extends React.Component {
                     <TableRow playerId="B" play={this.play}/>
                     <TableRow playerId="C" play={this.play}/>
                 </div>
-                <button id="again" className="none" onClick={this.refresh}>play again</button>
+                <form>
+                    <button id="again" className="none">play again</button>
+                </form>
             </div>
         );
     }
