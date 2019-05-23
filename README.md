@@ -1,2 +1,4 @@
-# Tic-Tac with React
-Play an old game! It is always good to train with an old game.
+# In the memory of the old games, project with React
+
+Play Tic Tac (X and O) or guess a number!  
+Have fun while train react skills with old games.
