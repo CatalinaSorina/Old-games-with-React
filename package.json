@@ -1,14 +1,15 @@
 {
-  "name": "Tic-Tac-with-React",
+  "name": "Old-games-with-React",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://catalinasorina.github.io/Tic-Tac-with-React/",
+  "homepage": "https://catalinasorina.github.io/Old-games-with-React/",
   "dependencies": {
     "gh-pages": "^2.0.1",
     "prop-types": "15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-scripts": "3.0.0"
+    "react-scripts": "3.0.0",
+    "styled-components": "^4.2.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -30,5 +31,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "babel-plugin-styled-components": "^1.10.0",
+    "plugins": "babel-plugin-styled-components"
   }
 }
