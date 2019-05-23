@@ -2,29 +2,70 @@ import React from 'react';
 
 import styled from 'styled-components';
 
-const Button = styled.button`
-    background: transparent;
-    border-radius: 3px;
-    border: 2px solid palevioletred;
-    color: palevioletred;
-    margin: 0 1em;
-    padding: 0.25em 1em;
-`
+const Div=styled.div`
+    display:flex;
+    flex-direction:column;
+    justify-content:inherit;
+    align-items:center;
+    margin:auto;
+`;
+
+const Input = styled.input`
+    border-radius: 5%;
+    width: 3rem;
+    background: rgba(255, 158, 138);
+    color:black;
+    border: 0.1rem solid #C38172;
+    color: #C38172;
+    margin: 1rem;
+    padding: 1rem;
+    outline:none;
+    font-family: 'Pangolin', cursive;
+
+    :hover {
+        background: transparent;
+        border-color:#FF9E8A;
+    }
+
+    ::placeholder {
+        color:#FFF3F1;
+        text-align:center;
+    }
+`;
+
+const Label= styled.label`
+    background-color:transparent;
+    color:darkred;
+    width:30rem;
+    margin: 1rem;
+    padding: 1rem;
+    font-size: 3rem;
+    font-family: 'Raleway Dots', cursive;
+`;
 
 class GuessNumber extends React.Component {
-    guess = () => {
+    constructor(){
+        super();
+        this.state = {
+            guessed:'Guess a number between 0 and 100!'
+        }
+    }
+
+    guess = (e) => {
         let nrFloat=(Math.random()*100);
         let nr=nrFloat-(nrFloat%1);
-        const numGuessed=document.querySelector("number").value;
-        (nr===numGuessed)? console.log("guessed"):console.log(nr+" was the right number");
+        const numGuessed=Number(e.target.value);
+        // (nr===numGuessed)? console.log("guessed"):console.log(nr+" was the right number, yours was "+numGuessed);
+        let guessing=(nr===numGuessed)? "You guessed the number !!!":"Guess a number between 0 and 100!";
+        this.setState({guessed:guessing});
     }
 
     render(){
         return(
-            <div>
-                <input id="number" placeholder="number"/>
-                <Button onClick={this.guess}>GUESS</Button>
-            </div>
+            <Div>
+                <Label>{this.state.guessed}</Label>
+                <Input id="number" placeholder="guess" onChange={this.guess}/>
+            </Div>
         )
     };
 }
