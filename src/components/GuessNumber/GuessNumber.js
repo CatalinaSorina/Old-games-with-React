@@ -56,7 +56,7 @@ class GuessNumber extends React.Component {
         let nr=nrFloat-(nrFloat%1);
         const numGuessed=Number(e.target.value);
         // (nr===numGuessed)? console.log("guessed"):console.log(nr+" was the right number, yours was "+numGuessed);
-        let guessing=(nr===numGuessed)? "You guessed the number !!!":"Guess a number between 0 and 100!";
+        let guessing=(nr===numGuessed)? "You guessed the number !!!":"Wrong number!";
         this.setState({guessed:guessing});
     }
 
